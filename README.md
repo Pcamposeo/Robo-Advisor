@@ -2,7 +2,7 @@
 
 Authors: Piero Camposeo (Lead), Sathun Suthakaran, Ishaan Bansal
 
-Python program whose goal is to generate a portfolio, based on a random set of tickers, whose projected value over an arbitrary number of days is as close to its starting value as possible.
+Python Data Analysis program created with the goal of generating a portfolio, whose projected value over an arbitrary number of days is as close to its starting value as possible.
 
 
 <b>Achievements:</b>
