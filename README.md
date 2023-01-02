@@ -53,9 +53,9 @@ Python program whose goal is to generate a portfolio, based on a random set of t
 <b>Problems / Improvements that Still Exist:</b>
 
 1. Risk-free rate (rf)
-    - We do not account for the fact that the rf changes over time. This could cause issues with accuracy of expected returns predictions (but not with the performance of the program in terms of our goal).
-    - We do not automatically update the rf. This could be annoying for the user, and could cause issues with accuracy of expected returns predictions (but not with the performance of the program in terms of our goal).
-    - The rf was causing inaccuracies and issues with regards to the Monte-Carlo simulation (for reasons beyond our comprehension). For this reason, we had to remove it from the simulation. This did not affect the performance of the program in terms of our goal, nor the accuracy of predictions, as is explained in the program.
+    - We do not account for the fact that the rf changes over time. This could cause issues with accuracy of expected returns predictions (but not noticeably with the performance of the program in terms of our goal).
+    - We do not automatically update the rf. This could be annoying for the user, and could cause issues with accuracy of expected returns predictions (but not noticeably with the performance of the program in terms of our goal).
+    - The rf was causing inaccuracies and issues with regards to the Monte-Carlo simulation (for reasons beyond our comprehension). For this reason, we had to remove it from the simulation. This did not noticeably affect the performance of the program in terms of our goal, nor the accuracy of predictions, as is explained in the program.
 
 2. Due to the nature of statistical distribution, for a portfolio of many stocks, the number of generated portfolios with one or more stocks at 
 a high weight is disproportionately low compared to the number of generated portfolios whose weights all sit around 100% divided by the number of stocks (the mean). A different system of weight generation could be implemented to offset this.
