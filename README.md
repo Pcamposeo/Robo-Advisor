@@ -4,13 +4,14 @@ Authors: Piero Camposeo (Lead), Sathun Suthakaran, Ishaan Bansal
 
 Python program whose goal is to generate a portfolio, based on a random set of tickers, whose projected value over an arbitrary number of days is as close to its starting value as possible.
 
+
 <b>Achievements:</b>
 
 1. Increased performance times for io bound tasks by up to 800% by implementing multithreading to speed up API requests.
     - This project had the fastest data cleaning pipeline of anyone who completed the same project (Those in the class).
 
 2. Developed efficient systems to select tickers and allocation of capital to achieve the goal and outperform a benchmark in achieving the goal.
-    - Includes a one million iteration Monte Carlo simulation that runs in ~1m 30s
+    - Includes a one million iteration Monte Carlo simulation that runs in as little as 32 seconds.
 
 3. Successfully implemented a modified Capital Asset Pricing Model to accurately predict portfolio expected returns.
 
@@ -18,6 +19,7 @@ Python program whose goal is to generate a portfolio, based on a random set of t
     - Was able to show that the selected portfolio was accurate in terms of meeting the goal.
 
 5. Scored extremely well when submitted for evaluation to established finance professor James Thompson and Teaching Assistants.
+
 
 <b>Problems we Were Able to Fix / Improvements we Were Able to Make:</b>
 
@@ -47,6 +49,7 @@ Python program whose goal is to generate a portfolio, based on a random set of t
 8. Inaccuracies with regards to returns data for the portfolio and market.
     - Retrieved price data with existing "get_closing_df", along with a new function, "get_harmonized_df", which is able to perform the same task as "get_closing_df", but with a selection of stocks to be merged. Developed function get_pct_change to gather the return over a given period.
 
+
 <b>Problems / Improvements that Still Exist:</b>
 
 1. Risk-free rate (rf)
@@ -60,16 +63,6 @@ a high weight is disproportionately low compared to the number of generated port
 3. The Monte Carlo simulation is a CPU-heavy task. Since the best_weighting function needs to generate 1 million portfolios, the computer spends most of the runtime crunching numbers. With this being said, multiprocessing may have been preferred for our simulation. Unfortunately, after many efforts, we could not get a multiprocessing system to work.
 
 4. The program can be inconsistent, even when provided with the same information many times. This is especially prevalent with the Monte Carlo simulation. Periodically, it will output a portfolio that is noticeably different than the optimal portfolio / what it would normally output. This was happening very frequently before we removed the risk-free rate, but still happens sometimes. This may be a local issue, as we used an old surface pro to test-run the program.
+    - Suggestions: Having a more efficient system for picking stock weights than a Monte Carlo simulation could be helpful.
 
-Dependencies:
-Pandas
-Numpy
-numpy_financial
-MatPlotLib
-datetime
-dateutil.relativedelta
-threading
-YFinance
-Queue
-random
-uniform
+Dependencies: Pandas, Numpy, numpy_financial, MatPlotLib, datetime, dateutil.relativedelta, threading, YFinance, Queue, random, uniform
